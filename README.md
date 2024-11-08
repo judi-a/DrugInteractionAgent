@@ -1,4 +1,4 @@
-##Overview
+## Overview
 
 The main task of this AI agent is to facilitate the drug discovery process. Understanding how drug interacts with other proteins and molecules helps developing effective treatments for diseases while minimizing side effects. 
 
@@ -22,19 +22,25 @@ This code is packaged into a Docker container.
 To run, download the docker image and run it using this command
 clone the repo
 build the docker image and run the container
+```sh
 docker build -t predictor-docker:latest .
 docker run -it -p 9999:9999 predictor-docker
+```
 
 Inside the docker image, run the conda enviroment using 
+```sh
 conda activate python_env
+```
 
 then export your openAI API key using this command
+```sh
 export OPENAI_API_KEY=XXXXXXXXX
+```
 
 Your main entry point should be drug_extractor_agent.py. Inside it, the function agent_call() is responsible for managing the agents
 
 
-##Dependencies
+## Dependencies
 This code requires the following libraries:
 
 openai for accessing OpenAI's API.
@@ -45,9 +51,6 @@ DeepPurpose for DTI models, datasets, and utilities.
 Custom utils functions, including get_compound_name and get_target_name_from_uniprot, assumed to be defined in utils.py.
 Global Variables
 SAVE_PATH: Directory path where pretrained model data will be saved. Defaults to "./saved_path".
-
-
-
 
 
 
@@ -66,7 +69,7 @@ conda activate python_env
 sk-proj-XXXXXXXXXXXXX (USE YOUR API KEY)
 ```
 
-# How to run the code
+# How to deploy with Docker and Heroku 
 
 ```sh
 cd DrugPredictor
