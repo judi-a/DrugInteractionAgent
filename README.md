@@ -1,4 +1,4 @@
-Overview
+##Overview
 
 The main task of this AI agent is to facilitate the drug discovery process. Understanding how drug interacts with other proteins and molecules helps developing effective treatments for diseases while minimizing side effects. 
 
@@ -11,11 +11,11 @@ This agent asks the user to input a proposal of the experiment they are working 
 
 4. There is also a medical agent that provides explanation on how the drugs are used
 
-############ Demo ##################
+## Demo 
 To see it working, you can go to Demo.ipynb and look at the results. 
 
 
-###### How to run the code #########
+# How to run the code
 To make it work on your machine, you first need to download Docker and create an account on openAI and get your openAI key
 
 This code is packaged into a Docker container. 
@@ -34,10 +34,7 @@ export OPENAI_API_KEY=XXXXXXXXX
 Your main entry point should be drug_extractor_agent.py. Inside it, the function agent_call() is responsible for managing the agents
 
 
-
-
-
-Dependencies
+##Dependencies
 This code requires the following libraries:
 
 openai for accessing OpenAI's API.
